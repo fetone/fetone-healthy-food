@@ -1,0 +1,44 @@
+<!--轮播图-->
+<view class="banner">
+  <swiper class="swiper" autoplay interval="3000" circular bindchange="changeImg">
+    <swiper-item class="swiper-item" wx:for="{{swiperImgs}}" wx:key="index">
+      <image src="{{item.image}}" class="swiper-img"></image>
+      <view class="swiper-desc">{{item.title}}</view>
+    </swiper-item>
+  </swiper>
+  <!-- 选中当前的页码 -->
+  <view class="swiper-index">{{swiperIndex + 1}}/{{swiperImgs.length}}</view>
+</view>
+<!--轮播图结束-->
+
+<!-- 每日一测开始 -->
+<view class="day-test">
+  <view class="test-item">
+    <image src="../../images/info_left.jpg"></image>
+    <view class="test-title">每日一测</view>
+  </view>
+  <view class="test-item">
+    <image src="../../images/info_right.jpg"></image>
+    <view class="test-title">每日食谱</view>
+  </view>
+</view>
+<!-- 每日一测结束 -->
+
+<!-- 资讯开始 -->
+<view class="news">
+  <view class="news-item" wx:for="{{newsList}}" wx:key="index">
+    <navigator url="../newsDetail/newsDetail?id={{item.id}}">
+      <view class="news-title">{{item.title}}</view>
+      <view class="news-content">
+        <view>
+        <image class="news-img" src="{{item.image}}" mode="scaleToFill"></image>
+        </view>
+        <view class="news-desc">
+          <view class="desc-text">{{item.desc}}</view>
+          <view class="desc-read"><text>{{item.readNum}}</text> 阅读</view>
+        </view>
+      </view>
+    </navigator>
+  </view>
+</view>
+<!-- 资讯结束 -->

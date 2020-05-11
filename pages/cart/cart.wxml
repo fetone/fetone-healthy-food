@@ -1,0 +1,42 @@
+<!-- 购物车列表 -->
+<view class="cart">
+  <view class="cart-item {{activeIndex === index ? 'active': ''}}" wx:for="{{cartList}}" wx:key="id">
+    <view class="item-info" bindtouchstart="moveStart" bindtouchmove="moveLeft" data-index="{{index}}">
+      <icon class="icon" type="{{item.isSelected ? 'success' : 'circle'}}" bindtap="chooseHandle" data-index="{{index}}"></icon>
+      <view class="item-img">
+        <image src="{{item.pic}}"></image>
+      </view>
+      <view class="item-desc">
+        <view>
+          <view class="content-title">{{item.name}}</view>
+          <view class="content-text">{{item.info}}</view>
+        </view>
+        <view class="item-num">
+          <view class="item-price">￥{{item.price}}</view>
+          <view class="count-handle">
+            <view class="count-sub" bindtap="handleCount" data-index="{{index}}" data-type="sub">-</view>
+            <view class="count">{{item.num}}</view>
+            <view class="count-add" bindtap="handleCount" data-index="{{index}}" data-type="add">+</view>
+          </view>
+        </view> 
+      </view>
+    </view>
+    <view class="remove">
+      <view class="remove-text" catchtap="delCart" data-id="{{item.id}}">删除</view>
+    </view>
+  </view>
+</view>
+
+<!-- 合计 -->
+<view class="computed">
+  <view class="choose-all">
+    <icon bindtap="chooseAll" type="{{isChooseAll ? 'success' : 'circle'}}" class="choose-circle"></icon>
+    <text>全选</text>
+  </view>
+  <view class="total">
+    <text class="total-price">合计</text>
+    <text>{{totalPrice}}</text>
+    <text class="no-freight">不含运费</text>
+    <view class="pay-price {{isPay ? 'is-pay' : ''}}" >结算 ({{totalPrice}})</view>
+  </view>
+</view>

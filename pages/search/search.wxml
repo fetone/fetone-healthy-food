@@ -1,0 +1,13 @@
+<view class="search">
+  <input auto-focus placeholder="请输入" class="search-input" bindinput="searchGoods"></input>
+</view>
+
+<!-- 搜索列表开始 -->
+<import src="../../templates/productList/productList.wxml" />
+
+<view wx:for="{{foodsList}}" wx:key="id">
+  <template is="productList" data="{{...item}}"></template>
+</view>
+<!-- 搜索列表结束 -->
+
+<view class="no-data" hidden="{{hasData}}">暂无数据</view>

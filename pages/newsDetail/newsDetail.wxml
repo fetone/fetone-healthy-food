@@ -1,0 +1,4 @@
+
+<view class="title">{{newsDetail.title}}</view>
+<image src="{{newsDetail.image}}"></image>
+<view class="content">{{newsDetail.detail}}</view>

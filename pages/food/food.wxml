@@ -1,0 +1,26 @@
+<!-- 搜索框开始 -->
+<view class="search">
+  <view class="search-pos" bindtap="goSelectCity">{{location}}</view>
+  <input placeholder="请输入" class="search-input" bindtap="goSearch"></input>
+</view>
+<!-- 搜索框结束 -->
+
+<!-- 分类开始 -->
+<view class="prod-category">
+  <view class="prod-item" wx:for="{{productCategory}}" wx:key="id" bindtap="goFoodTypeList" data-type="{{item.id}}">
+    <image src="{{item.imgUrl}}"></image>
+    <view>{{item.name}}</view>
+  </view>
+</view>
+<!-- 分类结束 -->
+
+<!-- 产品列表开始 -->
+<import src="../../templates/productList/productList.wxml" />
+<view wx:for="{{foodsList}}" wx:key="id" bindtap="goGoodsDetail" data-goodsid="{{item.id}}">
+  <template is="productList" data="{{...item}}"></template>
+</view>
+<!-- 产品列表结束 -->
+
+<!-- <button bindtap="getMore" wx:if="{{isShow}}">点击加载更多</button> -->
+<view class="none-line" wx:if="{{isShow}}">--- 我是有底线的 ---</view>
+<view class="none-line" wx:if="{{isShowNone}}">暂无数据</view>

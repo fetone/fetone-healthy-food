@@ -1,0 +1,162 @@
+page{
+  background-color: #f1f1f1;
+}
+.cart{
+  padding-bottom: 100rpx;
+}
+.cart-item{
+  width: 100%;
+  height: 250rpx;
+  margin-bottom: 10rpx;
+  display: flex;
+  overflow: hidden;
+}
+.item-info{
+  width: 100%;
+  padding: 20rpx;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  overflow: hidden;
+  background-color: #fff;
+  position: relative;
+  z-index: 999;
+  transition: all 0.5s;
+  transform: translateX(150rpx);
+  margin-left: -150rpx;
+}
+.icon{
+  margin-right: 10rpx;
+}
+.item-img image{
+  width: 200rpx;
+  height: 200rpx;
+  margin-right: 20rpx;
+}
+.item-desc{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.item-desc .content-title{
+  font-size: medium;
+  color: #333;
+  margin-bottom: 10rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.item-desc .content-text{
+  font-size: small;
+  color: #555;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  display:-webkit-box;
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:2;
+}
+.item-num{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.item-price{
+  color: #d50;
+  font-size: medium;
+}
+.count-handle{
+  display: flex;
+  align-items: center;
+}
+.count-sub, .count-add{
+  width: 40rpx;
+  height: 40rpx;
+  line-height: 35rpx;
+  border: 1rpx solid #333;
+  text-align: center;
+  font-size: 30rpx;
+}
+.count-sub{
+  background-color: #fff;
+  color: #333;
+}
+.count-add{
+  background-color: #333;
+  color: #fff;
+}
+.count{
+  font-size: 30rpx;
+  margin: 30rpx
+}
+
+.remove{
+  width: 150rpx;
+  line-height: 100rpx;
+  background-color: rgb(221, 59, 0);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s;
+  transform: translateX(150rpx);
+}
+.remove-text{
+  width: 40rpx;
+  margin: 0 auto;
+  font-size: 40rpx;
+}
+/* 滑动动画 */
+.active .item-info, .active .remove{
+  transform: translateX(0rpx);
+}
+
+/* 结算 */
+.computed{
+  width: 100%;
+  height: 100rpx;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 9999;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.choose-all{
+  margin-left: 20rpx;
+  display: flex;
+  align-items: center;
+  color: #333;
+}
+.choose-circle{
+  margin-right: 20rpx;
+}
+
+.total{
+  display: flex;
+  align-items: center;
+}
+.total-price{
+  color: #333;
+  font-size: 32rpx;
+  margin-right: 10rpx;
+}
+.no-freight{
+  color: #999;
+  font-size: 28rpx;
+  margin: 0 20rpx;
+}
+.total .pay-price{
+  width: 220rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  background-color: #666;
+  color: #fff;
+  text-align: center;
+}
+/* 显示结算颜色 */
+.pay-price.is-pay{
+  background-color: #43BF92;
+}

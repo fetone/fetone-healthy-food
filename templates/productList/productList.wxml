@@ -1,0 +1,16 @@
+<template name="productList">
+  <view class="prod-list">
+    <view class="list-goods">
+      <view class="goods-img">
+        <image src="{{pic}}"></image>
+      </view>
+      <view class="goods-info">
+        <view>
+          <view class="goods-title">{{name}}</view>
+          <view class="goods-text">{{description}}</view>
+        </view>
+        <view class="goods-price"><text>￥{{price}}</text> {{buynum}}人付款</view>
+      </view>
+    </view>
+  </view>
+</template>

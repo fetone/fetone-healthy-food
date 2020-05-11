@@ -1,0 +1,82 @@
+page{
+  background-color: #f1f1f1;
+}
+/* 轮播图 */
+.swiper{
+  width: 100%;
+  height: 550rpx;
+}
+.swiper-img{
+  width: 100%;
+  height: 100%;
+}
+
+/* 标题 */
+.goods-title{
+  height: 60rpx;
+  line-height: 60rpx;
+  padding-left: 20rpx;
+  font-size: medium;
+  font-weight: bold;
+  color: #333;
+  background-color: #fff;
+}
+
+/* 评论 */
+.comment{
+  height: 60rpx;
+  line-height: 60rpx;
+  padding-left: 20rpx;
+  font-size: small;
+  color: #555;
+  background-color: #fff;
+  margin: 20rpx 0;
+}
+
+/* 详情介绍 */
+.detail{
+  padding: 20rpx;
+  font-size: small;
+  color: #555;
+  background-color: #fff;
+  margin-bottom: 100rpx;
+  line-height: 40rpx;
+}
+
+/* 购物车 */
+.cart{
+  width: 100%;
+  padding: 20rpx;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+}
+.cart-img image{
+  width: 60rpx;
+  height: 60rpx;
+}
+.buy{
+  border-radius: 30rpx;
+  margin: 0 20rpx;
+  display: flex;
+  overflow: hidden;
+}
+.add-cart, .buy-now{
+  width: 220rpx;
+  height: 70rpx;
+  text-align: center;
+  line-height: 70rpx;
+  color: #fff;
+}
+.add-cart{
+  background-color: rgb(206, 0, 0);
+  /* border-radius: 30rpx 0 0 30rpx; */
+}
+.buy-now{
+  background-color: rgb(216, 0, 0);
+  /* border-radius: 0 30rpx 30rpx 0; */
+}

@@ -1,0 +1,2 @@
+/* 列表样式引入 */
+@import '../../templates/productList/productList.wxss';

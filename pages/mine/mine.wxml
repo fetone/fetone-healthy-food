@@ -1,0 +1,13 @@
+<view class="user">
+  <open-data type="userAvatarUrl" class="user-avatar"></open-data>
+  <open-data type="userNickName" class="user-name"></open-data>
+</view>
+<view>
+  <button wx:if="{{isShowBtn}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">点击登录</button>
+  <view wx:else class="user-two">
+    <view>
+      <image src="{{userInfo.avatarUrl}}" class="user-avatar"></image>
+    </view>
+    <view>{{userInfo.nickName}}</view>
+  </view>
+</view>

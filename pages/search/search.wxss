@@ -1,0 +1,24 @@
+page{
+  background-color: #f1f1f1;
+}
+.search{
+  height: 80rpx;
+  background-color: #fff;
+  padding: 15rpx;
+  box-sizing: border-box;
+}
+.search-input{
+  flex: 1;
+  height: 50rpx;
+  background-color: #f1f1f1;
+  border-radius: 20rpx;
+  padding: 0 20rpx;
+}
+.no-data{
+  line-height: 60rpx;
+  text-align: center;
+  color: #999;
+}
+
+/* 列表样式引入 */
+@import '../../templates/productList/productList.wxss';

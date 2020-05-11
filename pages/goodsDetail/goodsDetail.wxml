@@ -1,0 +1,29 @@
+<!-- 产品轮播图 -->
+<swiper class="swiper">
+  <swiper-item>
+    <image src="{{goodsDetailData.pic}}" class="swiper-img"></image>
+  </swiper-item>
+   <swiper-item>
+    <image src="{{goodsDetailData.pic}}" class="swiper-img"></image>
+  </swiper-item>
+</swiper>
+
+<!-- 产品名称 -->
+<view class="goods-title">{{goodsDetailData.name}}</view>
+
+<!-- 评论 -->
+<view class="comment">暂无评论</view>
+
+<!-- 详情内容 -->
+<view class="detail">{{goodsDetailData.details}}</view>  
+
+<!-- 购物车 -->
+<view class="cart">
+  <view class="cart-img">
+    <image src="../../images/tab9.png" bindtap="goCart"></image>  
+  </view>
+  <view class="buy">
+    <view class="add-cart" bindtap="addCart">加入购物车</view>
+    <view class="buy-now">立即购买</view>
+  </view>
+</view>

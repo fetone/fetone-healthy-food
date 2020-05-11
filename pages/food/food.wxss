@@ -1,0 +1,57 @@
+page{
+  background-color: #f1f1f1;
+}
+/* 搜索框开始 */
+.search{
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+}
+.search-pos{
+  width: 100rpx;
+  text-align: center;
+  color: #333;
+}
+.search-input{
+  height: 55rpx;
+  flex: 1;
+  background-color: #eee;
+  margin-right: 30rpx;
+  border-radius: 20rpx;
+  padding: 0 20rpx;
+}
+/* 搜索框结束 */
+
+/* 分类开始 */
+.prod-category{
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #fff;
+}
+.prod-item{
+  width: 25%;
+  height: 120rpx;
+  text-align: center;
+  padding: 10rpx 0;
+}
+.prod-item image{
+  width: 80rpx;
+  height: 80rpx;
+}
+.prod-item view{
+  font-size: 26rpx;
+  color: #333;
+}
+/* 分类结束 */
+
+/* 列表样式引入 */
+@import '../../templates/productList/productList.wxss';
+
+/* 底线 */
+.none-line{
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  color: #999;
+}
